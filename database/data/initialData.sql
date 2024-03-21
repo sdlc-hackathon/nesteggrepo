@@ -18,4 +18,4 @@ lastname VARCHAR(50),
 age INT,
 savertype VARCHAR(50));
 
-insert into User('test', 'user', 18, 'dummy');
+insert into User Values('test', 'user', 18, 'dummy');
