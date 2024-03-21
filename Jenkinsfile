@@ -159,7 +159,7 @@ pipeline {
                         sh '''
                             cd "${WORKSPACE}/frontend"
 
-                            BACKEND_ROUTE=$(oc get route ${BACKEND_IMAGE_NAME} -o jsonpath='{.spec.host}')/nestegg
+                            BACKEND_ROUTE=$(oc get route ${BACKEND_IMAGE_NAME} -o jsonpath='nest-egg-newbies')
                             API="REACT_APP_API_BASE_URL=https://${BACKEND_ROUTE}/faqs"
                             echo $API
 
@@ -186,7 +186,7 @@ pipeline {
                                 oc create route edge --service ${FRONTEND_IMAGE_NAME}
                             fi
 
-                            FRONTEND_ROUTE=$(oc get route faqfrontend -o jsonpath='{.spec.host}')/nestegg
+                            FRONTEND_ROUTE=$(oc get route faqfrontend -o jsonpath='nest-egg-newbies')                            
                             echo "Here is the URL for your application:"
                             echo ${FRONTEND_ROUTE}
                         '''
