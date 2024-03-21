@@ -10,3 +10,12 @@ last_updated TIMESTAMP default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP );
 
 INSERT INTO faq(question,answer)
 VALUES ('What is the answer to life, the universe, and everything?', '42'),('What is 6 multiplied by 7?', '42'),('What is the ASCII code for the * character?','42'),('What is 50 minus 8?', '42');
+
+
+CREATE TABLE User(id INT not null AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(50),
+lastname VARCHAR(50),
+age INT,
+savertype VARCHAR(50));
+
+insert into User('test', 'user', 18, 'dummy');
