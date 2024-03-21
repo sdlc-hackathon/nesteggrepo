@@ -1,0 +1,16 @@
+const config = {
+  db: {
+    host: process.env.DB_HOST, // 'localhost' or ip address where database is hosted
+    port:  '3306',
+    user: process.env.DB_USER, // database username
+    password: process.env.DB_PASS, // database password
+    database: process.env.DB_NAME, // database name
+    connectTimeout: 40000,
+    connectionLimit: 200,
+    waitForConnections: true,
+    queueLimit: 0
+  },
+  rowsPerPage: 10,
+};
+
+module.exports = config;
